@@ -56,13 +56,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>79</string>
+					<string>82</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>78</string>
+					<string>81</string>
 					<key>Timestamp</key>
-					<string>763158093.672336</string>
+					<string>763500319.319533</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -101,13 +101,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>121</string>
+					<string>127</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>120</string>
+					<string>126</string>
 					<key>Timestamp</key>
-					<string>763437869.995935</string>
+					<string>763514460.430248</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -146,13 +146,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>146</string>
+					<string>152</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>145</string>
+					<string>151</string>
 					<key>Timestamp</key>
-					<string>763439888.266996</string>
+					<string>763514460.4303091</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -177,7 +177,7 @@
 				<key>trailing</key>
 				<string>    void cleanup() {
         
-        vkDestroySemaphore(device, imageAvailableSemaphore, nullptr);
+        for (size_t i = 0; i &lt; MAX_FRAMES_IN_FLIGHT; i++) {
 </string>
 			</dict>
 			<key>type</key>
@@ -191,13 +191,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>180</string>
+					<string>188</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>179</string>
+					<string>187</string>
 					<key>Timestamp</key>
-					<string>763439888.266776</string>
+					<string>763514460.430092</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -236,13 +236,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>254</string>
+					<string>262</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>253</string>
+					<string>261</string>
 					<key>Timestamp</key>
-					<string>763439888.26687</string>
+					<string>763514460.4302011</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -281,13 +281,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>267</string>
+					<string>275</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>266</string>
+					<string>274</string>
 					<key>Timestamp</key>
-					<string>763439888.266814</string>
+					<string>763514460.430232</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -328,13 +328,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>278</string>
+					<string>286</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>277</string>
+					<string>285</string>
 					<key>Timestamp</key>
-					<string>763439888.2671</string>
+					<string>763514460.430324</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -373,13 +373,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>324</string>
+					<string>332</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>323</string>
+					<string>331</string>
 					<key>Timestamp</key>
-					<string>763439888.266852</string>
+					<string>763514460.430354</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -418,13 +418,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>332</string>
+					<string>340</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>331</string>
+					<string>339</string>
 					<key>Timestamp</key>
-					<string>763439888.267065</string>
+					<string>763514460.43006</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -463,13 +463,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>357</string>
+					<string>365</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>356</string>
+					<string>364</string>
 					<key>Timestamp</key>
-					<string>763439888.267031</string>
+					<string>763514460.430339</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -508,13 +508,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>382</string>
+					<string>390</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>381</string>
+					<string>389</string>
 					<key>Timestamp</key>
-					<string>763439888.267048</string>
+					<string>763514460.429895</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -553,13 +553,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>399</string>
+					<string>407</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>398</string>
+					<string>406</string>
 					<key>Timestamp</key>
-					<string>763439888.267152</string>
+					<string>763514460.430263</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -598,13 +598,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>435</string>
+					<string>443</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>434</string>
+					<string>442</string>
 					<key>Timestamp</key>
-					<string>763439888.266943</string>
+					<string>763514460.4302779</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -643,13 +643,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>486</string>
+					<string>494</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>485</string>
+					<string>493</string>
 					<key>Timestamp</key>
-					<string>763439888.266925</string>
+					<string>763514460.43037</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -688,13 +688,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>549</string>
+					<string>557</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>548</string>
+					<string>556</string>
 					<key>Timestamp</key>
-					<string>763439888.267013</string>
+					<string>763514460.430186</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -733,13 +733,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>578</string>
+					<string>586</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>577</string>
+					<string>585</string>
 					<key>Timestamp</key>
-					<string>763439888.267083</string>
+					<string>763514460.430076</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -778,13 +778,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>604</string>
+					<string>612</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>603</string>
+					<string>611</string>
 					<key>Timestamp</key>
-					<string>763439888.2668329</string>
+					<string>763514460.430385</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -823,13 +823,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>651</string>
+					<string>659</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>650</string>
+					<string>658</string>
 					<key>Timestamp</key>
-					<string>763439888.266795</string>
+					<string>763514460.430217</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -868,13 +868,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>813</string>
+					<string>821</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>812</string>
+					<string>820</string>
 					<key>Timestamp</key>
-					<string>763439888.267134</string>
+					<string>763514460.4301389</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -913,13 +913,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>839</string>
+					<string>847</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>838</string>
+					<string>846</string>
 					<key>Timestamp</key>
-					<string>763439888.266487</string>
+					<string>763514460.4300441</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -958,13 +958,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>855</string>
+					<string>863</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>854</string>
+					<string>862</string>
 					<key>Timestamp</key>
-					<string>763439888.266978</string>
+					<string>763514460.430108</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -987,9 +987,9 @@
     
 </string>
 				<key>trailing</key>
-				<string>    void createCommandBuffer() {
-        VkCommandBufferAllocateInfo allocInfo{};
-        allocInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
+				<string>    void createCommandBuffers() {
+        commandBuffers.resize(MAX_FRAMES_IN_FLIGHT);
+
 </string>
 			</dict>
 			<key>type</key>
@@ -1003,13 +1003,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>871</string>
+					<string>881</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>870</string>
+					<string>880</string>
 					<key>Timestamp</key>
-					<string>763439888.267117</string>
+					<string>763514460.430123</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -1048,13 +1048,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>928</string>
+					<string>938</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>927</string>
+					<string>937</string>
 					<key>Timestamp</key>
-					<string>763439888.266907</string>
+					<string>763514460.430293</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -1078,8 +1078,8 @@
 </string>
 				<key>trailing</key>
 				<string>    void createSyncObjects() {
-        // Semaphores
-        VkSemaphoreCreateInfo semaphoreInfo{};
+        imageAvailableSemaphores.resize(MAX_FRAMES_IN_FLIGHT);
+        renderFinishedSemaphores.resize(MAX_FRAMES_IN_FLIGHT);
 </string>
 			</dict>
 			<key>type</key>
@@ -1093,13 +1093,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>947</string>
+					<string>964</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>946</string>
+					<string>963</string>
 					<key>Timestamp</key>
-					<string>763439888.26696</string>
+					<string>763514460.430171</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -1124,7 +1124,7 @@
 				<key>trailing</key>
 				<string>    void drawFrame() {
         // Wait For Previous Frame
-        vkWaitForFences(device, 1, &amp;inFlightFence, VK_TRUE, UINT64_MAX);
+        vkWaitForFences(device, 1, &amp;inFlightFences[currentFrame], VK_TRUE, UINT64_MAX);
 </string>
 			</dict>
 			<key>type</key>
@@ -1138,13 +1138,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>1053</string>
+					<string>1073</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>1053</string>
+					<string>1073</string>
 					<key>Timestamp</key>
-					<string>763439888.266888</string>
+					<string>763514724.842132</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
