@@ -146,13 +146,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>152</string>
+					<string>167</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>151</string>
+					<string>166</string>
 					<key>Timestamp</key>
-					<string>763514460.4303091</string>
+					<string>763515379.434841</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -168,16 +168,61 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>    // Cleanup Process
+				<string>        vkDestroyPipeline(device, graphicsPipeline, nullptr);
 </string>
 				<key>leading</key>
-				<string>    }
+				<string>        }
+        
+</string>
+				<key>trailing</key>
+				<string>        vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
+        vkDestroyRenderPass(device, renderPass, nullptr);
+        
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>206</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>205</string>
+					<key>Timestamp</key>
+					<string>763515511.889371</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>VulkanRender/main.cpp</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>        const char** glfwExtensions;
+</string>
+				<key>leading</key>
+				<string>        // Required GLFW Extensions
+        uint32_t glfwExtensionCount = 0;
+</string>
+				<key>trailing</key>
+				<string>        glfwExtensions = glfwGetRequiredInstanceExtensions(&amp;glfwExtensionCount);
 
-</string>
-				<key>trailing</key>
-				<string>    void cleanup() {
-        
-        for (size_t i = 0; i &lt; MAX_FRAMES_IN_FLIGHT; i++) {
+        createInfo.enabledExtensionCount = glfwExtensionCount;
 </string>
 			</dict>
 			<key>type</key>
@@ -191,13 +236,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>188</string>
+					<string>280</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>187</string>
+					<string>279</string>
 					<key>Timestamp</key>
-					<string>763514460.430092</string>
+					<string>763515511.889239</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -213,16 +258,16 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>    // Create and bind vulkan instance
+				<string>            }
 </string>
 				<key>leading</key>
-				<string>    
-    // SubFunction of initVulkan
+				<string>            if (availablePresentMode == VK_PRESENT_MODE_MAILBOX_KHR) {
+                return availablePresentMode;
 </string>
 				<key>trailing</key>
-				<string>    void createInstance() {
-        
-        // App Info
+				<string>        }
+
+        return VK_PRESENT_MODE_FIFO_KHR;
 </string>
 			</dict>
 			<key>type</key>
@@ -236,13 +281,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>262</string>
+					<string>293</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>261</string>
+					<string>292</string>
 					<key>Timestamp</key>
-					<string>763514460.4302011</string>
+					<string>763515511.8893</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -258,61 +303,16 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>    // Creating Swapchain Settings
+				<string>
 </string>
 				<key>leading</key>
-				<string>    }
-    
+				<string>            int width, height;
+            glfwGetFramebufferSize(window, &amp;width, &amp;height);
 </string>
 				<key>trailing</key>
-				<string>    VkSurfaceFormatKHR chooseSwapSurfaceFormat(const std::vector&lt;VkSurfaceFormatKHR&gt;&amp; availableFormats) {
-        
-        // Set Colorspace and Format
-</string>
-			</dict>
-			<key>type</key>
-			<string>bookmark</string>
-		</dict>
-		<dict>
-			<key>destination</key>
-			<dict>
-				<key>location-parameters</key>
-				<dict>
-					<key>EndingColumnNumber</key>
-					<string>0</string>
-					<key>EndingLineNumber</key>
-					<string>275</string>
-					<key>StartingColumnNumber</key>
-					<string>0</string>
-					<key>StartingLineNumber</key>
-					<string>274</string>
-					<key>Timestamp</key>
-					<string>763514460.430232</string>
-				</dict>
-				<key>rebasable-url</key>
-				<dict>
-					<key>base</key>
-					<string>workspace</string>
-					<key>payload</key>
-					<dict>
-						<key>relative-path</key>
-						<string>VulkanRender/main.cpp</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>text-context</key>
-			<dict>
-				<key>focused</key>
-				<string>    // Creating and Setting Present Mode
-</string>
-				<key>leading</key>
-				<string>    }
-    
-</string>
-				<key>trailing</key>
-				<string>    VkPresentModeKHR chooseSwapPresentMode(const std::vector&lt;VkPresentModeKHR&gt;&amp; availablePresentModes) {
-        for (const auto&amp; availablePresentMode : availablePresentModes) {
-            if (availablePresentMode == VK_PRESENT_MODE_MAILBOX_KHR) {
+				<string>            VkExtent2D actualExtent = {
+                static_cast&lt;uint32_t&gt;(width),
+                static_cast&lt;uint32_t&gt;(height)
 </string>
 			</dict>
 			<key>title</key>
@@ -328,13 +328,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>286</string>
+					<string>304</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>285</string>
+					<string>303</string>
 					<key>Timestamp</key>
-					<string>763514460.430324</string>
+					<string>763515511.889184</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -350,106 +350,16 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>    // Swap Extent (Swapchain Resolution)
+				<string>    }
 </string>
 				<key>leading</key>
-				<string>    }
-    
+				<string>            return actualExtent;
+        }
 </string>
 				<key>trailing</key>
-				<string>    VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR&amp; capabilities) {
-        if (capabilities.currentExtent.width != std::numeric_limits&lt;uint32_t&gt;::max()) {
-            return capabilities.currentExtent;
-</string>
-			</dict>
-			<key>type</key>
-			<string>bookmark</string>
-		</dict>
-		<dict>
-			<key>destination</key>
-			<dict>
-				<key>location-parameters</key>
-				<dict>
-					<key>EndingColumnNumber</key>
-					<string>0</string>
-					<key>EndingLineNumber</key>
-					<string>332</string>
-					<key>StartingColumnNumber</key>
-					<string>0</string>
-					<key>StartingLineNumber</key>
-					<string>331</string>
-					<key>Timestamp</key>
-					<string>763514460.430354</string>
-				</dict>
-				<key>rebasable-url</key>
-				<dict>
-					<key>base</key>
-					<string>workspace</string>
-					<key>payload</key>
-					<dict>
-						<key>relative-path</key>
-						<string>VulkanRender/main.cpp</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>text-context</key>
-			<dict>
-				<key>focused</key>
-				<string>    // Window Surface Creation
-</string>
-				<key>leading</key>
-				<string>    }
-    
-</string>
-				<key>trailing</key>
-				<string>    void createSurface() {
-        if (glfwCreateWindowSurface(instance, window, nullptr, &amp;surface) != VK_SUCCESS) {
-            throw std::runtime_error("failed to create window surface!");
-</string>
-			</dict>
-			<key>type</key>
-			<string>bookmark</string>
-		</dict>
-		<dict>
-			<key>destination</key>
-			<dict>
-				<key>location-parameters</key>
-				<dict>
-					<key>EndingColumnNumber</key>
-					<string>0</string>
-					<key>EndingLineNumber</key>
-					<string>340</string>
-					<key>StartingColumnNumber</key>
-					<string>0</string>
-					<key>StartingLineNumber</key>
-					<string>339</string>
-					<key>Timestamp</key>
-					<string>763514460.43006</string>
-				</dict>
-				<key>rebasable-url</key>
-				<dict>
-					<key>base</key>
-					<string>workspace</string>
-					<key>payload</key>
-					<dict>
-						<key>relative-path</key>
-						<string>VulkanRender/main.cpp</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>text-context</key>
-			<dict>
-				<key>focused</key>
-				<string>    // Check for Vulkan Capable GPU's (Exit if none)
-</string>
-				<key>leading</key>
 				<string>    
-    // SubFunction of InitVulkan
-</string>
-				<key>trailing</key>
-				<string>    void pickPhysicalDevice() {
-        uint32_t deviceCount = 0;
-        vkEnumeratePhysicalDevices(instance, &amp;deviceCount, nullptr);
+    // Validation Layer Support
+    bool checkValidationLayerSupport() {
 </string>
 			</dict>
 			<key>type</key>
@@ -463,13 +373,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>365</string>
+					<string>350</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>364</string>
+					<string>349</string>
 					<key>Timestamp</key>
-					<string>763514460.430339</string>
+					<string>763515511.889313</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -485,16 +395,16 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>    // Check if Device is Suitable
+				<string>        vkEnumeratePhysicalDevices(instance, &amp;deviceCount, devices.data());
 </string>
 				<key>leading</key>
-				<string>    }
-    
+				<string>        
+        std::vector&lt;VkPhysicalDevice&gt; devices(deviceCount);
 </string>
 				<key>trailing</key>
-				<string>    bool isDeviceSuitable(VkPhysicalDevice device) {
-        VkPhysicalDeviceProperties deviceProperties;
-        VkPhysicalDeviceFeatures deviceFeatures;
+				<string>        
+        for (const auto&amp; device : devices) {
+            if (isDeviceSuitable(device)) {
 </string>
 			</dict>
 			<key>type</key>
@@ -508,13 +418,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>390</string>
+					<string>358</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>389</string>
+					<string>357</string>
 					<key>Timestamp</key>
-					<string>763514460.429895</string>
+					<string>763515511.889418</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -530,16 +440,16 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>    // Check Device Extension Support
+				<string>
 </string>
 				<key>leading</key>
-				<string>    }
-    
+				<string>            }
+        }
 </string>
 				<key>trailing</key>
-				<string>    bool checkDeviceExtensionSupport(VkPhysicalDevice device) {
-        uint32_t extensionCount;
-        vkEnumerateDeviceExtensionProperties(device, nullptr, &amp;extensionCount, nullptr);
+				<string>        if (physicalDevice == VK_NULL_HANDLE) {
+            throw std::runtime_error("failed to find a suitable GPU!");
+        }
 </string>
 			</dict>
 			<key>type</key>
@@ -553,13 +463,58 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
+					<string>383</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>382</string>
+					<key>Timestamp</key>
+					<string>763515511.889213</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>VulkanRender/main.cpp</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>        }
+</string>
+				<key>leading</key>
+				<string>            SwapChainSupportDetails swapChainSupport = querySwapChainSupport(device);
+            swapChainAdequate = !swapChainSupport.formats.empty() &amp;&amp; !swapChainSupport.presentModes.empty();
+</string>
+				<key>trailing</key>
+				<string>        
+        // Device Suitable Checks-Return
+        return indices.isComplete() &amp;&amp; extensionsSupported &amp;&amp; swapChainAdequate;
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>408</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
 					<string>407</string>
-					<key>StartingColumnNumber</key>
-					<string>0</string>
-					<key>StartingLineNumber</key>
-					<string>406</string>
 					<key>Timestamp</key>
-					<string>763514460.430263</string>
+					<string>763515511.88936</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -575,16 +530,16 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>    // Queue Families
-</string>
-				<key>leading</key>
-				<string>    }
-    
-</string>
-				<key>trailing</key>
 				<string>    QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device) {
-        QueueFamilyIndices indices;
+</string>
+				<key>leading</key>
+				<string>    
+    // Queue Families
+</string>
+				<key>trailing</key>
+				<string>        QueueFamilyIndices indices;
         // Assign index to queue families that could be found
+        uint32_t queueFamilyCount = 0;
 </string>
 			</dict>
 			<key>type</key>
@@ -598,13 +553,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>443</string>
+					<string>425</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>442</string>
+					<string>424</string>
 					<key>Timestamp</key>
-					<string>763514460.4302779</string>
+					<string>763515511.889264</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -620,15 +575,60 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>    // Logical Device
+				<string>            vkGetPhysicalDeviceSurfaceSupportKHR(device, i, surface, &amp;presentSupport);
 </string>
 				<key>leading</key>
-				<string>    
-    
+				<string>            // Find Present To Window Surface Capable Queue
+            VkBool32 presentSupport = false;
 </string>
 				<key>trailing</key>
-				<string>    void createLogicalDevice() {
-        QueueFamilyIndices indices = findQueueFamilies(physicalDevice);
+				<string>           
+            // Check Bool + Store Presentation Queue Family Index
+            if (presentSupport) {
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>461</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>460</string>
+					<key>Timestamp</key>
+					<string>763515511.889199</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>VulkanRender/main.cpp</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>        
+</string>
+				<key>leading</key>
+				<string>        }
+        
+</string>
+				<key>trailing</key>
+				<string>        // Used Device Features
+        VkPhysicalDeviceFeatures deviceFeatures{};
         
 </string>
 			</dict>
@@ -643,13 +643,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>494</string>
+					<string>512</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>493</string>
+					<string>511</string>
 					<key>Timestamp</key>
-					<string>763514460.43037</string>
+					<string>763515511.889407</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -665,17 +665,242 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>    // Creating Swapchain
+				<string>        createInfo.sType = VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR;
 </string>
 				<key>leading</key>
-				<string>    }
-    
+				<string>        // Apply Swapchain to Surface
+        VkSwapchainCreateInfoKHR createInfo{};
 </string>
 				<key>trailing</key>
-				<string>    void createSwapChain() {
-        SwapChainSupportDetails swapChainSupport = querySwapChainSupport(physicalDevice);
+				<string>        createInfo.surface = surface;
+        
+        // Swapchain Details
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>575</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>574</string>
+					<key>Timestamp</key>
+					<string>763515511.88943</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>VulkanRender/main.cpp</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>            createInfo.subresourceRange.levelCount = 1;
+</string>
+				<key>leading</key>
+				<string>            createInfo.subresourceRange.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+            createInfo.subresourceRange.baseMipLevel = 0;
+</string>
+				<key>trailing</key>
+				<string>            createInfo.subresourceRange.baseArrayLayer = 0;
+            createInfo.subresourceRange.layerCount = 1;
+            
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>604</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>603</string>
+					<key>Timestamp</key>
+					<string>763515511.889383</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>VulkanRender/main.cpp</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>            details.presentModes.resize(presentModeCount);
+</string>
+				<key>leading</key>
+				<string>
+        if (presentModeCount != 0) {
+</string>
+				<key>trailing</key>
+				<string>            vkGetPhysicalDeviceSurfacePresentModesKHR(device, surface, &amp;presentModeCount, details.presentModes.data());
+        }
+        
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>630</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>629</string>
+					<key>Timestamp</key>
+					<string>763515511.889395</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>VulkanRender/main.cpp</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>        subpass.colorAttachmentCount = 1;
+</string>
+				<key>leading</key>
+				<string>        VkSubpassDescription subpass{};
+        subpass.pipelineBindPoint = VK_PIPELINE_BIND_POINT_GRAPHICS;
+</string>
+				<key>trailing</key>
+				<string>        subpass.pColorAttachments = &amp;colorAttachmentRef;
+        
+        //
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>677</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>676</string>
+					<key>Timestamp</key>
+					<string>763515511.889325</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>VulkanRender/main.cpp</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>        fragShaderStageInfo.pName = "main";
+</string>
+				<key>leading</key>
+				<string>        fragShaderStageInfo.stage = VK_SHADER_STAGE_FRAGMENT_BIT;
+        fragShaderStageInfo.module = fragShaderModule;
+</string>
+				<key>trailing</key>
+				<string>        
+        VkPipelineShaderStageCreateInfo shaderStages[] = {vertShaderStageInfo, fragShaderStageInfo};
+        
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>839</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>838</string>
+					<key>Timestamp</key>
+					<string>763515511.889226</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>VulkanRender/main.cpp</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>            // Runtime Error/Create Framebuffers
+</string>
+				<key>leading</key>
+				<string>            framebufferInfo.layers = 1;
 
 </string>
+				<key>trailing</key>
+				<string>            if (vkCreateFramebuffer(device, &amp;framebufferInfo, nullptr, &amp;swapChainFramebuffers[i]) != VK_SUCCESS) {
+                throw std::runtime_error("failed to create framebuffer!");
+            }
+</string>
 			</dict>
 			<key>type</key>
 			<string>bookmark</string>
@@ -688,13 +913,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>557</string>
+					<string>865</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>556</string>
+					<string>864</string>
 					<key>Timestamp</key>
-					<string>763514460.430186</string>
+					<string>763515511.8893369</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -710,286 +935,16 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>    // Create Image Views
+				<string>        commandBuffers.resize(MAX_FRAMES_IN_FLIGHT);
 </string>
 				<key>leading</key>
-				<string>    }
-    
-</string>
-				<key>trailing</key>
-				<string>    void createImageViews() {
-        swapChainImageViews.resize(swapChainImages.size());
-        for (size_t i = 0; i &lt; swapChainImages.size(); i++) {
-</string>
-			</dict>
-			<key>type</key>
-			<string>bookmark</string>
-		</dict>
-		<dict>
-			<key>destination</key>
-			<dict>
-				<key>location-parameters</key>
-				<dict>
-					<key>EndingColumnNumber</key>
-					<string>0</string>
-					<key>EndingLineNumber</key>
-					<string>586</string>
-					<key>StartingColumnNumber</key>
-					<string>0</string>
-					<key>StartingLineNumber</key>
-					<string>585</string>
-					<key>Timestamp</key>
-					<string>763514460.430076</string>
-				</dict>
-				<key>rebasable-url</key>
-				<dict>
-					<key>base</key>
-					<string>workspace</string>
-					<key>payload</key>
-					<dict>
-						<key>relative-path</key>
-						<string>VulkanRender/main.cpp</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>text-context</key>
-			<dict>
-				<key>focused</key>
-				<string>    // More SwapChain Details
-</string>
-				<key>leading</key>
-				<string>    }
-    
-</string>
-				<key>trailing</key>
-				<string>    SwapChainSupportDetails querySwapChainSupport(VkPhysicalDevice device) {
-        SwapChainSupportDetails details;
-        
-</string>
-			</dict>
-			<key>type</key>
-			<string>bookmark</string>
-		</dict>
-		<dict>
-			<key>destination</key>
-			<dict>
-				<key>location-parameters</key>
-				<dict>
-					<key>EndingColumnNumber</key>
-					<string>0</string>
-					<key>EndingLineNumber</key>
-					<string>612</string>
-					<key>StartingColumnNumber</key>
-					<string>0</string>
-					<key>StartingLineNumber</key>
-					<string>611</string>
-					<key>Timestamp</key>
-					<string>763514460.430385</string>
-				</dict>
-				<key>rebasable-url</key>
-				<dict>
-					<key>base</key>
-					<string>workspace</string>
-					<key>payload</key>
-					<dict>
-						<key>relative-path</key>
-						<string>VulkanRender/main.cpp</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>text-context</key>
-			<dict>
-				<key>focused</key>
-				<string>    // Render Passes
-</string>
-				<key>leading</key>
-				<string>    
-    
-</string>
-				<key>trailing</key>
-				<string>    void createRenderPass() {
-        VkAttachmentDescription colorAttachment{};
-        colorAttachment.format = swapChainImageFormat;
-</string>
-			</dict>
-			<key>type</key>
-			<string>bookmark</string>
-		</dict>
-		<dict>
-			<key>destination</key>
-			<dict>
-				<key>location-parameters</key>
-				<dict>
-					<key>EndingColumnNumber</key>
-					<string>0</string>
-					<key>EndingLineNumber</key>
-					<string>659</string>
-					<key>StartingColumnNumber</key>
-					<string>0</string>
-					<key>StartingLineNumber</key>
-					<string>658</string>
-					<key>Timestamp</key>
-					<string>763514460.430217</string>
-				</dict>
-				<key>rebasable-url</key>
-				<dict>
-					<key>base</key>
-					<string>workspace</string>
-					<key>payload</key>
-					<dict>
-						<key>relative-path</key>
-						<string>VulkanRender/main.cpp</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>text-context</key>
-			<dict>
-				<key>focused</key>
-				<string>    // Graphics Pipeline
-</string>
-				<key>leading</key>
-				<string>    }
-    
-</string>
-				<key>trailing</key>
-				<string>    void createGraphicsPipeline() {
-        auto vertShaderCode = readFile("/Users/lukeraykovitz/Documents/Projects/VulkanRender/VulkanRender/shaders/vert.spv");
-        auto fragShaderCode = readFile("/Users/lukeraykovitz/Documents/Projects/VulkanRender/VulkanRender/shaders/frag.spv");
-</string>
-			</dict>
-			<key>type</key>
-			<string>bookmark</string>
-		</dict>
-		<dict>
-			<key>destination</key>
-			<dict>
-				<key>location-parameters</key>
-				<dict>
-					<key>EndingColumnNumber</key>
-					<string>0</string>
-					<key>EndingLineNumber</key>
-					<string>821</string>
-					<key>StartingColumnNumber</key>
-					<string>0</string>
-					<key>StartingLineNumber</key>
-					<string>820</string>
-					<key>Timestamp</key>
-					<string>763514460.4301389</string>
-				</dict>
-				<key>rebasable-url</key>
-				<dict>
-					<key>base</key>
-					<string>workspace</string>
-					<key>payload</key>
-					<dict>
-						<key>relative-path</key>
-						<string>VulkanRender/main.cpp</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>text-context</key>
-			<dict>
-				<key>focused</key>
-				<string>    // Framebuffer
-</string>
-				<key>leading</key>
-				<string>    
-    
-</string>
-				<key>trailing</key>
-				<string>    void createFramebuffers() {
-        swapChainFramebuffers.resize(swapChainImageViews.size());
-        
-</string>
-			</dict>
-			<key>type</key>
-			<string>bookmark</string>
-		</dict>
-		<dict>
-			<key>destination</key>
-			<dict>
-				<key>location-parameters</key>
-				<dict>
-					<key>EndingColumnNumber</key>
-					<string>0</string>
-					<key>EndingLineNumber</key>
-					<string>847</string>
-					<key>StartingColumnNumber</key>
-					<string>0</string>
-					<key>StartingLineNumber</key>
-					<string>846</string>
-					<key>Timestamp</key>
-					<string>763514460.4300441</string>
-				</dict>
-				<key>rebasable-url</key>
-				<dict>
-					<key>base</key>
-					<string>workspace</string>
-					<key>payload</key>
-					<dict>
-						<key>relative-path</key>
-						<string>VulkanRender/main.cpp</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>text-context</key>
-			<dict>
-				<key>focused</key>
-				<string>    // CommandPool
-</string>
-				<key>leading</key>
-				<string>    
-    
-</string>
-				<key>trailing</key>
-				<string>    void createCommandPool() {
-        QueueFamilyIndices queueFamilyIndices = findQueueFamilies(physicalDevice);
-
-</string>
-			</dict>
-			<key>type</key>
-			<string>bookmark</string>
-		</dict>
-		<dict>
-			<key>destination</key>
-			<dict>
-				<key>location-parameters</key>
-				<dict>
-					<key>EndingColumnNumber</key>
-					<string>0</string>
-					<key>EndingLineNumber</key>
-					<string>863</string>
-					<key>StartingColumnNumber</key>
-					<string>0</string>
-					<key>StartingLineNumber</key>
-					<string>862</string>
-					<key>Timestamp</key>
-					<string>763514460.430108</string>
-				</dict>
-				<key>rebasable-url</key>
-				<dict>
-					<key>base</key>
-					<string>workspace</string>
-					<key>payload</key>
-					<dict>
-						<key>relative-path</key>
-						<string>VulkanRender/main.cpp</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>text-context</key>
-			<dict>
-				<key>focused</key>
 				<string>    // Command Buffer
-</string>
-				<key>leading</key>
-				<string>    
-    
+    void createCommandBuffers() {
 </string>
 				<key>trailing</key>
-				<string>    void createCommandBuffers() {
-        commandBuffers.resize(MAX_FRAMES_IN_FLIGHT);
-
+				<string>
+        VkCommandBufferAllocateInfo allocInfo{};
+        allocInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
 </string>
 			</dict>
 			<key>type</key>
@@ -1009,7 +964,7 @@
 					<key>StartingLineNumber</key>
 					<string>880</string>
 					<key>Timestamp</key>
-					<string>763514460.430123</string>
+					<string>763515511.8892519</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -1048,13 +1003,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>938</string>
+					<string>899</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>937</string>
+					<string>898</string>
 					<key>Timestamp</key>
-					<string>763514460.430293</string>
+					<string>763515511.889276</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -1070,16 +1025,16 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>    // Sync Objects/Semaphores
+				<string>        
 </string>
 				<key>leading</key>
-				<string>    
-    
+				<string>        renderPassInfo.renderPass = renderPass;
+        renderPassInfo.framebuffer = swapChainFramebuffers[imageIndex];
 </string>
 				<key>trailing</key>
-				<string>    void createSyncObjects() {
-        imageAvailableSemaphores.resize(MAX_FRAMES_IN_FLIGHT);
-        renderFinishedSemaphores.resize(MAX_FRAMES_IN_FLIGHT);
+				<string>        renderPassInfo.renderArea.offset = {0, 0};
+        renderPassInfo.renderArea.extent = swapChainExtent;
+        
 </string>
 			</dict>
 			<key>type</key>
@@ -1093,13 +1048,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>964</string>
+					<string>956</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>963</string>
+					<string>955</string>
 					<key>Timestamp</key>
-					<string>763514460.430171</string>
+					<string>763515511.889349</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -1115,16 +1070,16 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>    // Draw Frame
+				<string>                vkCreateSemaphore(device, &amp;semaphoreInfo, nullptr, &amp;renderFinishedSemaphores[i]) != VK_SUCCESS ||
 </string>
 				<key>leading</key>
-				<string>    }
-    
+				<string>        for (size_t i = 0; i &lt; MAX_FRAMES_IN_FLIGHT; i++) {
+            if (vkCreateSemaphore(device, &amp;semaphoreInfo, nullptr, &amp;imageAvailableSemaphores[i]) != VK_SUCCESS ||
 </string>
 				<key>trailing</key>
-				<string>    void drawFrame() {
-        // Wait For Previous Frame
-        vkWaitForFences(device, 1, &amp;inFlightFences[currentFrame], VK_TRUE, UINT64_MAX);
+				<string>                vkCreateFence(device, &amp;fenceInfo, nullptr, &amp;inFlightFences[i]) != VK_SUCCESS) {
+
+                throw std::runtime_error("failed to create synchronization objects for a frame!");
 </string>
 			</dict>
 			<key>type</key>
@@ -1138,13 +1093,58 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>1073</string>
+					<string>982</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>1073</string>
+					<string>981</string>
 					<key>Timestamp</key>
-					<string>763514724.842132</string>
+					<string>763515511.8892879</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>VulkanRender/main.cpp</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>        VkSemaphore waitSemaphores[] = {imageAvailableSemaphores[currentFrame]};
+</string>
+				<key>leading</key>
+				<string>        submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
+
+</string>
+				<key>trailing</key>
+				<string>        VkPipelineStageFlags waitStages[] = {VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT};
+        submitInfo.waitSemaphoreCount = 1;
+        submitInfo.pWaitSemaphores = waitSemaphores;
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>1083</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>1083</string>
+					<key>Timestamp</key>
+					<string>764725991.435056</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>

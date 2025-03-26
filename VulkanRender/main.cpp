@@ -1061,6 +1061,16 @@ int main() {
     HelloTriangleApplication app;
     
     std::cout << "Initializing Main\n";
+    
+    const char* command = "/Users/lukeraykovitz/Documents/Projects/VulkanRender/VulkanRender/shaders/compile.sh";
+    int result = system(command);
+
+    if (result == 0) {
+        printf("Shader compilation script ran successfully.\n");
+    } else {
+        printf("Shader compilation script failed.\n");
+    }
+    
 
     try {
         app.run();
