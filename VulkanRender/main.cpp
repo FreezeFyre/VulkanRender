@@ -124,8 +124,10 @@ private:
         glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
         glfwWindowHint(GLFW_DECORATED, GLFW_TRUE);
         
+        
         //Only Fullscreen
         glfwWindowHint(GLFW_CENTER_CURSOR, GLFW_TRUE);
+        
         
         window = glfwCreateWindow(WIDTH, HEIGHT, "Vulkan", nullptr, nullptr);
         glfwSetWindowUserPointer(window, this);
