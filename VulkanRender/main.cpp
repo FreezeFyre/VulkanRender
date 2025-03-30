@@ -143,6 +143,9 @@ private:
     VkPipelineLayout pipelineLayout;
     VkPipeline graphicsPipeline;
     
+    VkBuffer vertexBuffer;
+    VkDeviceMemory vertexBufferMemory;
+    
     VkCommandPool commandPool;
     std::vector<VkCommandBuffer> commandBuffers;
 
@@ -196,6 +199,7 @@ private:
         createGraphicsPipeline();
         createFramebuffers();
         createCommandPool();
+        createVertexBuffers();
         createCommandBuffers();
         createSyncObjects();
     }
@@ -209,9 +213,14 @@ private:
         vkDeviceWaitIdle(device);
     }
 
+
+    
     // Cleanup Process
     void cleanup() {
         cleanupSwapChain();
+        
+        vkDestroyBuffer(device, vertexBuffer, nullptr);
+        vkFreeMemory(device, vertexBufferMemory, nullptr);
 
         vkDestroyPipeline(device, graphicsPipeline, nullptr);
         vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
@@ -237,7 +246,7 @@ private:
     }
     
     
-    // SubFunction of initVulkan
+
     // Create and bind vulkan instance
     void createInstance() {
         
@@ -914,6 +923,56 @@ private:
             throw std::runtime_error("failed to create command pool!");
         }
     }
+    
+
+    
+    // Vertex Buffers
+    void createVertexBuffers() {
+        
+        VkBufferCreateInfo bufferInfo{};
+        bufferInfo.sType = VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO;
+        bufferInfo.size = sizeof(vertices[0]) * vertices.size();
+        
+        bufferInfo.usage = VK_BUFFER_USAGE_VERTEX_BUFFER_BIT;
+        
+        bufferInfo.sharingMode = VK_SHARING_MODE_EXCLUSIVE;
+        
+        // Runtime Error/Creat Vertex Buffers
+        if (vkCreateBuffer(device, &bufferInfo, nullptr, &vertexBuffer) != VK_SUCCESS) {
+            throw std::runtime_error("failed to create vertex buffer!");
+        }
+        
+        
+        VkMemoryRequirements memRequirements;
+        vkGetBufferMemoryRequirements(device, vertexBuffer, &memRequirements);
+        
+        VkMemoryAllocateInfo allocInfo{};
+        allocInfo.sType = VK_STRUCTURE_TYPE_MEMORY_ALLOCATE_INFO;
+        allocInfo.allocationSize = memRequirements.size;
+        allocInfo.memoryTypeIndex = findMemoryType(memRequirements.memoryTypeBits, VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT);
+        
+        
+        if (vkAllocateMemory(device, &allocInfo, nullptr, &vertexBufferMemory) != VK_SUCCESS) {
+            throw std::runtime_error("failed to allocate vertex buffer memory!");
+        }
+        
+        vkBindBufferMemory(device, vertexBuffer, vertexBufferMemory, 0);
+    }
+    
+    uint32_t findMemoryType(uint32_t typeFilter, VkMemoryPropertyFlags properties) {
+        
+        VkPhysicalDeviceMemoryProperties memProperties;
+        vkGetPhysicalDeviceMemoryProperties(physicalDevice, &memProperties);
+        
+        for (uint32_t i = 0; i < memProperties.memoryTypeCount; i++) {
+            if ((typeFilter & (1 << i)) && (memProperties.memoryTypes[i].propertyFlags & properties) == properties) {
+                return i;
+            }
+        }
+
+        throw std::runtime_error("failed to find suitable memory type!");
+    }
+
     
     
     // Command Buffer
