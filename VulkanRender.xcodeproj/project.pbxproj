@@ -289,6 +289,7 @@
 					/usr/local/Cellar/glfw/3.4/lib,
 					"\"$(SRCROOT)/../../../VulkanSDK/1.4.304.1/macOS/lib\"",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -302,6 +303,7 @@
 					/usr/local/Cellar/glfw/3.4/lib,
 					"\"$(SRCROOT)/../../../VulkanSDK/1.4.304.1/macOS/lib\"",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
